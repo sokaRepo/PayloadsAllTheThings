@@ -1,6 +1,6 @@
 # Templates Injections
 
-Template injection allows an attacker to include template code into an existant (or not) template.
+Server Side Template injection allows an attacker to include template code into an existant (or not) template.
 
 ## Jinja2
 [Official website](http://jinja.pocoo.org/)
@@ -19,6 +19,11 @@ The above injections have been tested on Flask application.
   </ul>
 {% endblock %}
 
+```
+
+#### Test for SSTI
+```
+{{ 1+1 }} # must print 2
 ```
 
 #### Dump all used classes
